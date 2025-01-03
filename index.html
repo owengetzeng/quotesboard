@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Quotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .quote {
+            font-size: 1.5em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quote" id="quote">Click the button to see a quote!</div>
+        <button onclick="showQuote()">Show Another Quote</button>
+    </div>
+
+    <script>
+        // Array of quotes
+        const quotes = [
+            "Don't give up want you want most for what you want now"
+            "The magic you are looking for is in the work you are avoiding"
+            "Set a goal so big that you can't achieve it until you grow into the person who can"
+            "Quotes won't work unless you do"
+            "With the courage to being and the discipline to endure, victory becomes a matter of time"
+            "The man who loves walking will walk further than the man who loves the destination"
+            "Do it for your future self you wish to become"
+            "Anyone can do it when it's easy"
+            "When you feel like quitting, think about why you started"
+            "Tiny changes, remarkable results"
+            "You overestimate what you could do in a day but underestimate what you can do in a year"
+            "Live as if you were to die tomorrow. Learn as if you were to live forever"
+            "Quotes won't work unless you do"
+            "Just a 1% improvement every day can lead to remarkable progress over time"
+        ];
+
+        // Function to display a random quote
+        function showQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
