@@ -77,6 +77,9 @@
             const randomIndex = Math.floor(Math.random() * quotes.length);
             document.getElementById('quote').textContent = quotes[randomIndex];
         }
+
+        // Display a quote when the page loads
+        window.onload = showQuote;
     </script>
 </body>
 </html>
